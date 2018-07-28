@@ -35,42 +35,13 @@ restService.use(bodyParser.json());
 //var sess;
 
 
-restService.post("/wms", function (req, res) {
-    var array =
-     req.body.result &&
-      req.body.result.parameters &&
-      req.body.result.parameters.array
-        ? req.body.result.parameters.array
-       : "notselectedmenu";
-
-    return res.json({
-        speech: array,
-        displayText: array,
-        // speech: optionIntentname,
-        // displayText: optionIntentname,
-        source: "webhook-echo-sample"
-
-
-    });
-
-
-   
-
-    
-
-
+restService.get("/check", function (req, res) {
+    var items =[{name:'swik',location:'Texas'},
+                {name:'Tinku',location:'Texas'}
+    ];
+     res.send(items);
 
 });
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
 
 restService.listen(process.env.PORT || 8000, function () {
     console.log("Server up and listening");
