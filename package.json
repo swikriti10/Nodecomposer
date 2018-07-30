@@ -2,9 +2,9 @@
   "engines": {
     "composer": "^0.19.4"
   },
-  "name": "clp-network",
-  "version": "0.0.1",
-  "description": "Customer Loyalty Program network",
+  "name": "admin@product-auction",
+  "version": "0.0.2",
+  "description": "Product auction",
   "scripts": {
     "prepublish": "composer archive create -t dir -n .",
     "pretest": "npm run lint",
