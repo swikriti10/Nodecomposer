@@ -2,7 +2,7 @@
   "engines": {
     "composer": "^0.19.4"
   },
-  "name": "admin@product-auction",
+  "name": "product-auction",
   "version": "0.0.2",
   "description": "Product auction",
   "scripts": {
