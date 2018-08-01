@@ -3,7 +3,7 @@ const BusinessNetworkConnection = require('composer-client').BusinessNetworkConn
 const { BusinessNetworkDefinition, CertificateUtil, IdCard } = require('composer-common');
 
 //declate namespace
-const namespace = 'org.clp.biznet';
+const namespace = 'org.acme.product.auction';
 
 //in-memory card store for testing so cards are not persisted to the file system
 const cardStore = require('composer-common').NetworkCardStoreManager.getCardStore( { type: 'composer-wallet-inmemory' } );
@@ -27,7 +27,7 @@ async function importCardForIdentity(cardName, identity) {
 
   //use admin connection
   adminConnection = new AdminConnection();
-  businessNetworkName = 'clp-network';
+  businessNetworkName = 'product-auction';
 
   //declare metadata
   const metadata = {
