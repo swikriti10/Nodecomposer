@@ -96,3 +96,4 @@ memberData: async function (cardId, accountNumber) {
     }
 
 }
+}
