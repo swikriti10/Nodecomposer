@@ -45,7 +45,7 @@ app.get('/api/memberData', function(req, res) {
         returnData.email = member.email;
         returnData.firstName = member.firstName;
         returnData.lastName = member.lastName;
-        returnData.phoneNumber = member.balance;
+        returnData.balance = member.balance;
         
       }
 
