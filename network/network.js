@@ -18,32 +18,7 @@ let businessNetworkName = 'product-auction';
 let factory;
 
 
-/*
- * Import card for an identity
- * @param {String} cardName The card name to use for this identity
- * @param {Object} identity The identity details
- */
-async function importCardForIdentity(cardName, identity) {
 
-  //use admin connection
-  adminConnection = new AdminConnection();
-  businessNetworkName = 'product-auction';
-
-  //declare metadata
-  const metadata = {
-      userName: identity.userID,
-      version: 1,
-      enrollmentSecret: identity.userSecret,
-      businessNetwork: businessNetworkName
-  };
-
-  //get connectionProfile from json, create Idcard
-  const connectionProfile = require('./local_connection.json');
-  const card = new IdCard(metadata, connectionProfile);
-
-  //import card
-  await adminConnection.importCard(cardName, card);
-}
 
 
 /*
