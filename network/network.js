@@ -36,8 +36,7 @@ async function useIdentity(cardName) {
 }
 
 
-//export module
-module.exports = {
+
 
 /*
 * Get Member data
@@ -71,4 +70,4 @@ memberData: async function (cardId, accountNumber) {
     }
 
 }
-}
+
