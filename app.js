@@ -31,6 +31,8 @@ app.get('/api/memberData', function(req, res) {
 
   //declare return object
   var returnData = {};
+  
+  network.useIdentity(cardId);
 
   //get member data from network
   network.memberData(cardId, accountNumber)
