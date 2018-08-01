@@ -11,7 +11,7 @@ const app = express();
 const router = express.Router();
 
 //get the libraries to call
-var network = require('./network/network.js');
+//var network = require('./network/network.js');
 
 
 //bootstrap application settings
