@@ -15,39 +15,6 @@ var network = require('./network/network.js');
 
 
 //bootstrap application settings
-app.use(express.static('./public'));
-app.use('/scripts', express.static(path.join(__dirname, '/public/scripts')));
-app.use(bodyParser.json());
-
-//get home page
-app.get('/home', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/index.html'));
-});
-
-//get member page
-app.get('/member', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/member.html'));
-});
-
-//get member registration page
-app.get('/registerMember', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/registerMember.html'));
-});
-
-//get partner page
-app.get('/partner', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/partner.html'));
-});
-
-//get partner registration page
-app.get('/registerPartner', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/registerPartner.html'));
-});
-
-//get about page
-app.get('/about', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/about.html'));
-});
 
 
 
@@ -75,12 +42,11 @@ app.post('/api/memberData', function(req, res) {
         });
       } else {
         //else add member data to return object
-        returnData.accountNumber = member.accountNumber;
+        returnData.email = member.email;
         returnData.firstName = member.firstName;
         returnData.lastName = member.lastName;
-        returnData.phoneNumber = member.phoneNumber;
-        returnData.email = member.email;
-        returnData.points = member.points;
+        returnData.phoneNumber = member.balance;
+        
       }
 
     })
