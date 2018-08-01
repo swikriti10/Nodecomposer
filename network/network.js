@@ -14,7 +14,7 @@ let adminConnection;
 //this is the business network connection the tests will use.
 let businessNetworkConnection;
 
-let businessNetworkName = 'admin@product-auction';
+let businessNetworkName = 'product-auction';
 let factory;
 
 
