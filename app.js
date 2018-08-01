@@ -20,7 +20,7 @@ var network = require('./network/network.js');
 
 
 //post call to retrieve member data, transactions data and partners to perform transactions with from the network
-app.get('/api/memberData', function(req, res) {
+app.post('/api/memberData', function(req, res) {
 
   //declare variables to retrieve from request
   var accountNumber = req.body.accountnumber;
@@ -32,26 +32,13 @@ app.get('/api/memberData', function(req, res) {
   //declare return object
   var returnData = {};
   
-  network.useIdentity(cardId);
+  //network.useIdentity(cardId);
 
   //get member data from network
-  network.memberData(cardId, accountNumber)
-    .then((member) => {
-      //return error if error in response
-      if (member.error != null) {
-        res.json({
-          error: member.error
-        });
-      } else {
-        //else add member data to return object
-        returnData.email = member.email;
-        returnData.firstName = member.firstName;
-        returnData.lastName = member.lastName;
-        returnData.balance = member.balance;
-        
-      }
-
-    })
+returnData.email = member.email;
+        returnData.firstName ='x';
+        returnData.lastName ='y';
+        returnData.balance ='0';
     
 
                 //return returnData
