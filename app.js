@@ -50,7 +50,7 @@ restService.use(bodyParser.json());
 
 restService.get("/check", function (req, res) {
    var accountNumber ='testx@gmail.com';
-    var cardId ='testx@product-auction';
+    var cardId ='networkadmin';
 
     //print variables
     console.log('memberData using param - ' + ' accountNumber: ' + accountNumber + ' cardId: ' + cardId);
