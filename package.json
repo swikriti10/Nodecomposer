@@ -36,8 +36,9 @@
 "composer-admin": "^0.19.12",
 
 "composer-client": "^0.19.12",
-
+"composer-cli": "^0.19.13",
 "composer-common": "^0.19.12",
+"composer-connector-embedded": "^0.19.13",
 
 "express": "^4.16.3",
   "body-parser": "^1.18.2",
