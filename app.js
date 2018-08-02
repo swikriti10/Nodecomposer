@@ -36,10 +36,55 @@ restService.use(bodyParser.json());
 
 
 restService.get("/check", function (req, res) {
+   var accountNumber ='testx@gmail.com';
+    var cardId ='networkadmin';
+
+    //print variables
+    console.log('memberData using param - ' + ' accountNumber: ' + accountNumber + ' cardId: ' + cardId);
+
+    //declare return object
+    var returnData = {};
+  
+  
+  
+  
+  
+  
+  
+  
+  
     var items =[{name:'swik',location:'Texas'},
                 {name:'Tinku',location:'Texas'}
     ];
      res.send(items);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 });
 
