@@ -35,7 +35,7 @@ async function useIdentity(cardName) {
   await businessNetworkConnection.connect(cardName);
 }
 
-
+module.exports={
 
 
 /*
@@ -71,3 +71,4 @@ memberData: async function (cardId, accountNumber) {
 
 }
 
+}
