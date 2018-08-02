@@ -5,12 +5,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const path = require('path');
-
-
-
 var http = require('http');
 
-var session = require('express-session');
+
 
 //create express web-app
 const app = express();
