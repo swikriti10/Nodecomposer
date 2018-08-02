@@ -1,5 +1,7 @@
 {
-  
+  "engines": {
+    "composer": "^0.19.4"
+  },
   "name": "product-auction",
   "version": "0.0.2",
   "description": "Product auction",
