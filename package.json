@@ -6,9 +6,9 @@
   "version": "0.0.2",
   "description": "Product auction",
   
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"}
+    "start": "node app.js"}
   ,
   "keywords": [
     "composer",
