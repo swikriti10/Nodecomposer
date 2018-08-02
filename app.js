@@ -61,7 +61,7 @@ restService.get("/check", function (req, res) {
   try {
 
         //connect to network with cardId
-      //  businessNetworkConnection = new BusinessNetworkConnection();
+        businessNetworkConnection = new BusinessNetworkConnection();
        // await businessNetworkConnection.connect(cardId);
 //
         
