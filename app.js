@@ -49,7 +49,7 @@ restService.use(bodyParser.json());
 
 restService.get("/check", function (req, res) {
    var accountNumber ='testx@gmail.com';
-    var cardId ='networkadmin';
+    var cardId ='admin@product-auction';
 
     //print variables
     console.log('memberData using param - ' + ' accountNumber: ' + accountNumber + ' cardId: ' + cardId);
@@ -62,7 +62,7 @@ restService.get("/check", function (req, res) {
 
         //connect to network with cardId
         businessNetworkConnection = new BusinessNetworkConnection();
-       // await businessNetworkConnection.connect(cardId);
+        await businessNetworkConnection.connect(cardId);
 //
         
     
