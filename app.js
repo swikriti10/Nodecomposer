@@ -1,78 +1,48 @@
-'use strict';
+"use strict";
 
-//get libraries
-const express = require('express');
-const bodyParser = require('body-parser');
-const request = require('request');
-const path = require('path');
+const express = require("express");
+const bodyParser = require("body-parser");
 var http = require('http');
+var request = require('request');
+var session = require('express-session');
+var csrfToken;
 
 
-
-//create express web-app
-const app = express();
-const router = express.Router();
-//const restService = express();
+var c;
 
 
-//get the libraries to call
-var network = require('./network/network.js');
+const restService = express();
+
+const App = require('actions-on-google').DialogflowApp;
+var slack_message;
 
 
-//bootstrap application settings
+var url = "http://208.85.249.174:8000/sap/opu/odata/CRVWM/WMS_SRV/";
+var url1 = "https://wiprowms30june-b94b9a0ad.dispatcher.us1.hana.ondemand.com/WMS900/sap/opu/odata/CRVWM/WMS_SRV/";
+
+//var d = '1140';
+var i = 0;
+var obj = [];
+var botResponse = "";
+restService.use(
+  bodyParser.urlencoded({
+      extended: true
+  })
+);
+
+restService.use(bodyParser.json());
+//restService.use(session({ secret: 'ssshhhhh' }));
+//var sess;
 
 
-
-
-//routerpost call to retrieve member data, transactions data and partners to perform transactions with from the network
-app.get('/api/memberData', function(req, res) {
-
-  //declare variables to retrieve from request
-  var accountNumber = req.body.accountnumber;
-  var cardId = req.body.cardid;
-
-  //print variables
-  console.log('memberData using param - ' + ' accountNumber: ' + accountNumber + ' cardId: ' + cardId);
-
-  //declare return object
-  var returnData = {};
-  
-  //network.useIdentity(cardId);
-
-  //get member data from network
-   network.memberData(cardId, accountNumber)
-    .then((member) => {
-      //return error if error in response
-      if (member.error != null) {
-        res.json({
-          error: member.error
-        });
-      } else {
-        //else add member data to return object
-        returnData.email = member.email;
-        returnData.firstName = member.firstName;
-        returnData.lastName = member.lastName;
-        returnData.balance = member.balance;
-        
-      }
-
-    })
-
-                //return returnData
-                res.json(returnData);
-
-              
+restService.get("/check", function (req, res) {
+    var items =[{name:'swik',location:'Texas'},
+                {name:'Tinku',location:'Texas'}
+    ];
+     res.send(items);
 
 });
 
-
-//declare port
-var port = process.env.PORT || 8000;
-if (process.env.VCAP_APPLICATION) {
-  port = process.env.PORT;
-}
-
-//run app on port
-app.listen(port, function() {
-  console.log('app running on port: %d', port);
+restService.listen(process.env.PORT || 8000, function () {
+    console.log("Server up and listening");
 });
