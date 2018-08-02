@@ -5,12 +5,11 @@
   "name": "product-auction",
   "version": "0.0.2",
   "description": "Product auction",
+  
+  "main": "index.js",
   "scripts": {
-    "prepublish": "composer archive create -t dir -n .",
-    "pretest": "npm run lint",
-    "lint": "eslint .",
-    "test": "nyc mocha -t 0 test/*.js && cucumber-js"
-  },
+    "start": "node index.js"}
+  ,
   "keywords": [
     "composer",
     "composer-network"
