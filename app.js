@@ -65,11 +65,17 @@ restService.get("/check", function (req, res) {
         businessNetworkConnection = new BusinessNetworkConnection();
         businessNetworkConnection.connect(cardId);
     
-    
+    const memberRegistry =  businessNetworkConnection.getParticipantRegistry(namespace + '.Member');
+        const member =  memberRegistry.get(accountNumber);
+    returnData.email=member.email;
+    returnData.firstName=member.firstName;
+
+        //disconnect
+        await businessNetworkConnection.disconnect(cardId);
 //
         
     
-res.send("hii");
+res.send("returnData");
         //return member object
         
     }
