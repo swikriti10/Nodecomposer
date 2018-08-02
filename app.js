@@ -6,10 +6,16 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const path = require('path');
 
+
+
+var http = require('http');
+
+var session = require('express-session');
+
 //create express web-app
-//const app = express();
+const app = express();
 const router = express.Router();
-const restService = express();
+//const restService = express();
 
 
 //get the libraries to call
@@ -17,18 +23,18 @@ var network = require('./network/network.js');
 
 
 //bootstrap application settings
-restService.use(
+app.use(
   bodyParser.urlencoded({
       extended: true
   })
 );
 
-restService.use(bodyParser.json());
+app.use(bodyParser.json());
 
 
 
 //routerpost call to retrieve member data, transactions data and partners to perform transactions with from the network
-restService.get('/api/memberData', function(req, res) {
+app.get('/api/memberData', function(req, res) {
 
   //declare variables to retrieve from request
   var accountNumber = req.body.accountnumber;
