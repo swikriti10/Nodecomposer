@@ -11,7 +11,7 @@ const app = express();
 const router = express.Router();
 
 //get the libraries to call
-//var network = require('./network/network.js');
+var network = require('./network/network.js');
 
 
 //bootstrap application settings
@@ -35,11 +35,23 @@ app.post('/api/memberData', function(req, res) {
   //network.useIdentity(cardId);
 
   //get member data from network
-returnData.email = member.email;
-        returnData.firstName ='x';
-        returnData.lastName ='y';
-        returnData.balance ='0';
-    
+   network.memberData(cardId, accountNumber)
+    .then((member) => {
+      //return error if error in response
+      if (member.error != null) {
+        res.json({
+          error: member.error
+        });
+      } else {
+        //else add member data to return object
+        returnData.email = member.email;
+        returnData.firstName = member.firstName;
+        returnData.lastName = member.lastName;
+        returnData.balance = member.balance;
+        
+      }
+
+    })
 
                 //return returnData
                 res.json(returnData);
