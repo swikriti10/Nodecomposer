@@ -37,7 +37,11 @@
 
 "composer-common": "^0.19.12",
 
-"express": "^4.16.3"
+"express": "^4.16.3",
+  "body-parser": "^1.18.2",
+    
+ "request": "^2.85.0"
+
 
 }
  
