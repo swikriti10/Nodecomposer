@@ -46,17 +46,7 @@
 "express": "^4.16.3"
 
 }
-  "dependencies": {
-
-"composer-admin": "^0.19.12",
-
-"composer-client": "^0.19.12",
-
-"composer-common": "^0.19.12",
-
-"express": "^4.16.3"
-
-}
+ 
   
   
   
