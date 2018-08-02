@@ -23,13 +23,7 @@ var network = require('./network/network.js');
 
 
 //bootstrap application settings
-app.use(
-  bodyParser.urlencoded({
-      extended: true
-  })
-);
 
-app.use(bodyParser.json());
 
 
 
