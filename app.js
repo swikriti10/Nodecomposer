@@ -71,7 +71,7 @@ restService.get("/check", function (req, res) {
     returnData.firstName=member.firstName;
 
         //disconnect
-        await businessNetworkConnection.disconnect(cardId);
+         businessNetworkConnection.disconnect(cardId);
 //
         
     
