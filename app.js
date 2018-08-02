@@ -64,19 +64,9 @@ restService.get("/check", function (req, res) {
         businessNetworkConnection = new BusinessNetworkConnection();
         await businessNetworkConnection.connect(cardId);
 
-        //get member from the network
-        const memberRegistry = await businessNetworkConnection.getParticipantRegistry(namespace + '.Member');
-        const member = await memberRegistry.get(accountNumber);
-
-        //disconnect
-        await businessNetworkConnection.disconnect(cardId);
+        
     
-     returnData.email = member.email;
-    returnData.firstName = member.firstName;
-    returnData.lastName = member.lastName;
-    returnData.balance = member.balance;
-    
-res.send(returnData);
+res.send("hii");
         //return member object
         
     }
