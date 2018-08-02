@@ -61,9 +61,9 @@ restService.get("/check", function (req, res) {
   try {
 
         //connect to network with cardId
-        businessNetworkConnection = new BusinessNetworkConnection();
-        await businessNetworkConnection.connect(cardId);
-
+      //  businessNetworkConnection = new BusinessNetworkConnection();
+       // await businessNetworkConnection.connect(cardId);
+//
         
     
 res.send("hii");
@@ -75,7 +75,7 @@ res.send("hii");
         console.log(err);
         var error = {};
         error.error = err.message;
-        res.send("its error"+error);
+        res.send("its error");
     }
 
   
