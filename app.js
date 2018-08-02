@@ -19,8 +19,8 @@ var network = require('./network/network.js');
 
 
 
-//post call to retrieve member data, transactions data and partners to perform transactions with from the network
-app.post('/memberData', function(req, res) {
+//routerpost call to retrieve member data, transactions data and partners to perform transactions with from the network
+router.post('/memberData', function(req, res) {
 
   //declare variables to retrieve from request
   var accountNumber = req.body.accountnumber;
