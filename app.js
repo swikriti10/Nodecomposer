@@ -8,6 +8,7 @@ var session = require('express-session');
 var csrfToken;
 const AdminConnection = require('composer-admin').AdminConnection;
 const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
+
 const { BusinessNetworkDefinition, CertificateUtil, IdCard } = require('composer-common');
 
 //declate namespace
@@ -62,7 +63,9 @@ restService.get("/check", function (req, res) {
 
         //connect to network with cardId
         businessNetworkConnection = new BusinessNetworkConnection();
-        await businessNetworkConnection.connect(cardId);
+        businessNetworkConnection.connect(cardId);
+    
+    
 //
         
     
