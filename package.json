@@ -1,32 +1,4 @@
 {
-  "name": "webhook-echo-sample",
-  "version": "1.0.0",
-  "description": "Webhook echo sample",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "Sunil",
-  "dependencies": {
-     "actions-on-google": "^1.10.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-     "google-assistant-node": "0.0.12",
-    "request": "^2.85.0"
-    
-  }
-}
-
-
-
-
-
-
-
-
-
-
-{
   
   "name": "product-auction",
   "version": "0.0.2",
