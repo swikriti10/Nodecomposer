@@ -63,7 +63,7 @@ restService.get("/check", function (req, res) {
 
         //connect to network with cardId
         businessNetworkConnection = new BusinessNetworkConnection();
-        businessNetworkConnection.connect(cardId);
+        businessNetworkConnection.connect('admin@product-auction');
     
     const memberRegistry =  businessNetworkConnection.getParticipantRegistry(namespace + '.Member');
         const member =  memberRegistry.get(accountNumber);
