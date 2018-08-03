@@ -159,7 +159,7 @@ console.log('a');
 
 //return returnData
 
-res.json(returnData);
+res.send(returnData);
 
 
 
