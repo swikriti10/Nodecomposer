@@ -3,7 +3,7 @@
         "composer": "^0.19.12"
     },
   "name": "product-auction",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Product auction",
   
   "main": "app.js",
@@ -58,14 +58,8 @@
 
      "mocha": "latest"
    
-   
-   
-   
-   
-
  },
-  
-  
+   
   
   "dependencies": {
 
@@ -91,9 +85,6 @@
 
 
   }
- 
-  
-  
-  
+   
 }
 // JavaScript source code
