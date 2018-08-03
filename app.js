@@ -137,6 +137,7 @@ console.log(returnData.email);
 
 console.log('a');
 
+res.send(returnData);
 
 
 })
@@ -159,7 +160,7 @@ console.log('a');
 
 //return returnData
 
-res.send(returnData);
+//res.send(returnData);
 
 
 
