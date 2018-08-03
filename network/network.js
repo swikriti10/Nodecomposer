@@ -177,7 +177,7 @@ console.log('hi');
 
 //disconnect
 
-await businessNetworkConnection.disconnect(cardId);
+//await businessNetworkConnection.disconnect(cardId);
 
 
 
