@@ -72,9 +72,9 @@ app.get('/api/memberData', function(req, res) {
 
 var accountNumber ='testx@gmail.com';
 
-//var cardId ='admin@product-auction';
+var cardId ='admin@product-auction';
 
-var cardId ='testx@product-auction';
+//var cardId ='testx@product-auction';
 
 
 //await importCardForIdentity(cardId, identity);
