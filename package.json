@@ -1,9 +1,10 @@
+{
 
 "engines": {
         "composer": "^0.19.12"
     },
 
-{
+
 
 "name": "fabric-dev-servers",
 
